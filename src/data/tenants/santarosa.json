@@ -1,16 +1,91 @@
 {
   "id": "santarosa",
   "name": "Santa Rosa 10K",
-  "title": "Carrera y Caminata a Santa Rosa de Lima 2025",
-  "description": "Únete a la 1ª Carrera y Caminata a Santa Rosa de Lima el 30 de agosto en Carúpano. 10K y 5K con premios. ¡Vive la pasión del deporte!",
-  "heroImage": "/tenants/santarosa/hero.jpg",
-  "logo": "/tenants/santarosa/logo.png",
-  "primaryColor": "#ff0000",
-  "registrationLink": "https://wa.me/584120000000",
+  "title": "SANTA ROSA DE LIMA",
+  "year": "2025",
+  "subtitle": "Carrera y Caminata",
+  "description": "¡Bienvenidos a la Primera Edición de la Carrera y Caminata a Santa Rosa de Lima 2025! 🏃‍♂️🏃‍♀️\n\nUn evento lleno de energía, fe y comunidad que une a Carúpano en movimiento. Corre 10K o camina 5K por la Av. Rómulo Gallegos el 30 de agosto. ¡Inscríbete ahora y sé parte de esta celebración inolvidable! 💪🌟",
+  "heroImage": "/tenants/santarosa/hero-background2.jpg",
+  "logo": "/tenants/santarosa/assets/logos/SANTAROSA3_transparent.png",
+  "primaryColor": "#D50F17",
+  "secondaryColor": "#FFDB4A",
+  "registrationLink": "https://santarosa10k.com/inscripciones",
   "eventDate": "30 de agosto de 2025",
-  "location": "Carúpano, Venezuela",
+  "location": "Av. Rómulo Gallegos, Carúpano",
+  "infoCards": [
+    {
+      "title": "Fecha y Lugar",
+      "description": "📅 30 de agosto de 2025\n\n📍 Av. Rómulo Gallegos, Carúpano\n\n¡Marca tu calendario y prepárate para un día épico de deporte y unión comunitaria!",
+      "icon": "Calendar"
+    },
+    {
+      "title": "Inscripciones",
+      "description": "¡Asegura tu lugar! Inscripciones abiertas en santarosa10k.com.\n\nPreventa limitada: Carrera 1400 BS | Caminata 700 BS.\n\n¡No te quedes fuera, los cupos vuelan! 🚀",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Recorrido",
+      "description": "10K para corredores competitivos y 5K para caminantes recreativos.\n\nTres puntos de hidratación cortesía de @aguaselitesucre.\n\n¡Explora la ruta en Strava y visualiza tu victoria!",
+      "icon": "Route"
+    },
+    {
+      "title": "Expo Run y Entrega de Kits",
+      "description": "🗓️ Viernes 29 de agosto | 10 AM - 5 PM\n\n📍 Concha Acústica Luis Mariano Rivera\n\nRecoge tu kit, conoce a los patrocinadores y vive la emoción previa.\n¡Te esperamos!",
+      "icon": "Package"
+    }
+  ],
+  "sponsors": [
+    { "name": "Alcaldia", "logo": "/tenants/santarosa/assets/logos/alcaldia2.png", "type": "institutional" },
+    { "name": "Santa Rosa", "logo": "/tenants/santarosa/assets/logos/santarosadelima.png", "type": "institutional" },
+    { "name": "Elite", "logo": "/tenants/santarosa/assets/logos/sponsors/elite.svg", "type": "official" },
+    { "name": "Bangood", "logo": "/tenants/santarosa/assets/logos/sponsors/bangood.png", "type": "official" },
+    { "name": "Vnet", "logo": "/tenants/santarosa/assets/logos/sponsors/vnet.png", "type": "official" }
+  ],
+  "organizers": [
+    { "name": "Titanes Runners", "logo": "/tenants/santarosa/assets/logos/TITANES23.png" },
+    { "name": "Running Centauros", "logo": "/tenants/santarosa/assets/logos/centauros.png" }
+  ],
+  "eventDetails": {
+    "route": {
+      "title": "LA RUTA",
+      "description": "Un trayecto vibrante por la Av. Rómulo Gallegos: 10K lleno de adrenalina para corredores y 5K perfecto para caminantes.",
+      "image": "/tenants/santarosa/assets/images/ruta.png",
+      "stravaLinks": [
+        { "label": "Ver ruta 10K (Carrera)", "url": "https://www.strava.com/routes/3391286191514108116" },
+        { "label": "Ver ruta 5K (Caminata)", "url": "https://www.strava.com/routes/3391284416394467024" }
+      ]
+    },
+    "categories": [
+      { "name": "Juvenil", "range": "16-19" },
+      { "name": "Libre", "range": "20-29" },
+      { "name": "Submáster", "range": "30-39" },
+      { "name": "Máster A", "range": "40-49" }
+    ],
+    "awards": {
+      "absolutes": [
+        { "title": "Absolutos (Femenino y Masculino)", "amount": "$150" }
+      ],
+      "byCategory": [
+        { "label": "1er lugar", "amount": "$70" },
+        { "label": "2do lugar", "amount": "$50" },
+        { "label": "3er lugar", "amount": "$30" }
+      ]
+    },
+    "kit": {
+      "items": ["Camiseta oficial exclusiva", "Medalla de participación", "Número de participante"],
+      "image": "/tenants/santarosa/assets/logos/corredor2.png"
+    }
+  },
   "metadata": {
-    "keywords": ["Carrera", "Santa Rosa", "10K", "Carúpano"],
-    "ogImage": "/tenants/santarosa/og-image.jpg"
+    "keywords": ["Carrera Santa Rosa", "Caminata Carúpano", "Santa Rosa 10K"],
+    "ogImage": "/tenants/santarosa/og-image.jpg",
+    "gallery": [
+      "/tenants/santarosa/assets/gallery/race-1.jpg",
+      "/tenants/santarosa/assets/gallery/race-2.jpg",
+      "/tenants/santarosa/assets/gallery/race-3.jpg",
+      "/tenants/santarosa/assets/gallery/race-4.jpg",
+      "/tenants/santarosa/assets/gallery/race-5.jpg",
+      "/tenants/santarosa/assets/gallery/race-6.jpg"
+    ]
   }
 }
