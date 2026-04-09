@@ -1,16 +1,16 @@
-import Navbar from "@/components/apex/Navbar";
-import HeroSection from "@/components/apex/HeroSection";
-import StatsBar from "@/components/apex/StatsBar";
-import AboutSection from "@/components/apex/AboutSection";
-import ServicesSection from "@/components/apex/ServicesSection";
-import EventsSection from "@/components/apex/EventsSection";
-import ContactCTA from "@/components/apex/ContactCTA";
-import Footer from "@/components/apex/Footer";
+import Navbar from "@/components/zonacrono/Navbar";
+import HeroSection from "@/components/zonacrono/HeroSection";
+import StatsBar from "@/components/zonacrono/StatsBar";
+import AboutSection from "@/components/zonacrono/AboutSection";
+import ServicesSection from "@/components/zonacrono/ServicesSection";
+import EventsSection from "@/components/zonacrono/EventsSection";
+import ContactCTA from "@/components/zonacrono/ContactCTA";
+import Footer from "@/components/zonacrono/Footer";
 import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Apex Racing Live | Cronometraje Deportivo Profesional",
+  title: "Zonacrono | Cronometraje Deportivo Profesional",
   description: "Soluciones de cronometraje deportivo con tecnología RFID de última generación. Resultados en tiempo real para carreras, triatlones, ciclismo y más.",
 };
 

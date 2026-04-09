@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <Timer className="h-5 w-5 text-primary" strokeWidth={2.5} />
               <span className="font-satoshi text-lg font-black uppercase tracking-tight text-foreground">
-                Apex<span className="text-primary">Racing</span>
+                Zona<span className="text-primary">crono</span>
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground font-medium">
@@ -103,7 +103,7 @@ const Footer = () => {
       <div className="border-t">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
           <span className="font-mono text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Apex Racing Live. Todos los derechos reservados.
+            © {new Date().getFullYear()} Zonacrono. Todos los derechos reservados.
           </span>
           <span className="font-mono text-xs text-muted-foreground">
             Hecho con precisión 🏁

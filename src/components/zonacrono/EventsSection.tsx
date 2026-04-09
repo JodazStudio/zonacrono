@@ -1,23 +1,20 @@
 import { MapPin, Calendar, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const events = [
   {
-    date: "2026-04-12",
-    name: "Maratón Ciudad Capital",
-    location: "Ciudad de México, MX",
-    categories: "5K · 10K · 21K · 42K",
+    id: "santarosa10k",
+    date: "2026-05-15",
+    name: "Santa Rosa 10K",
+    location: "Carúpano, VE",
+    categories: "10K · 5K Caminata",
   },
   {
-    date: "2026-05-03",
-    name: "Triatlón Costa del Pacífico",
-    location: "Puerto Vallarta, MX",
-    categories: "Sprint · Olímpico",
-  },
-  {
-    date: "2026-06-15",
-    name: "Gran Fondo Ciclista Sierra",
-    location: "Monterrey, MX",
-    categories: "60K · 120K",
+    id: "bici-race",
+    date: "2026-06-22",
+    name: "Bici Race Carúpano",
+    location: "Carúpano, VE",
+    categories: "80K Ruta · 40K MTB",
   },
 ];
 
@@ -47,7 +44,7 @@ const EventsSection = () => {
         </div>
 
         {/* Event cards */}
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 max-w-4xl">
           {events.map((event) => {
             const { day, month, year } = formatDate(event.date);
             return (
@@ -81,13 +78,13 @@ const EventsSection = () => {
                     {event.categories}
                   </div>
 
-                  <a
-                    href="#contacto"
-                    className="btn-mechanical mt-6 bg-primary text-center text-primary-foreground"
+                  <Link
+                    href={`/${event.id}`}
+                    className="btn-mechanical mt-6 bg-primary text-center text-primary-foreground flex items-center justify-center"
                   >
-                    Inscribirse
+                    Ver Evento
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             );

@@ -1,0 +1,65 @@
+{
+  "id": "santarosa10k",
+  "name": "Santa Rosa 10K",
+  "title": "SANTA ROSA 10K",
+  "year": "2026",
+  "subtitle": "Carrera & Caminata Solidaria",
+  "description": "La edición 2026 de la Santa Rosa 10K regresa a Carúpano. Un evento diseñado para corredores de todos los niveles, recorriendo las calles históricas y la brisa marina de nuestra ciudad. Únete a cientos de atletas en esta celebración deportiva única.",
+  "heroImage": "https://images.unsplash.com/photo-1532444458054-015fddf2b2cd?q=80&w=2070&auto=format&fit=crop",
+  "logo": "/tenants/santarosa/assets/logos/SANTAROSA3_transparent.png",
+  "primaryColor": "#D50F17",
+  "secondaryColor": "#FFDB4A",
+  "registrationLink": "/inscripcion",
+  "eventDate": "15 de mayo de 2026",
+  "location": "Avenida Universitaria, Carúpano",
+  "infoCards": [
+    {
+      "title": "Fecha y Punto de Salida",
+      "description": "📅 15 de Mayo de 2026\n\n📍 Plaza Bolívar de Carúpano\n\nPrepárate para la salida puntualmente a las 6:30 AM para evitar las altas temperaturas.",
+      "icon": "Calendar"
+    },
+    {
+      "title": "Inscripciones",
+      "description": "Preventa especial hasta el 30 de Abril.\n\nGeneral: $15 | Estudiantes: $10\n\nIncluye camiseta técnica y medalla de finisher.",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Ruta Certificada",
+      "description": "Circuito de 10K medido y certificado por cronometraje profesional RFID para resultados exactos.",
+      "icon": "Route"
+    }
+  ],
+  "sponsors": [],
+  "organizers": [],
+  "eventDetails": {
+    "route": {
+      "title": "EL RECORRIDO",
+      "description": "Un circuito de 10K certificado que recorre los puntos más emblemáticos de Carúpano, desde el puerto hasta la zona universitaria.",
+      "image": "/tenants/santarosa/assets/images/ruta.png"
+    },
+    "categories": [
+      { "name": "Juvenil", "range": "15-17" },
+      { "name": "Libre", "range": "18-35" },
+      { "name": "Submáster", "range": "36-45" },
+      { "name": "Máster", "range": "46+" }
+    ],
+    "awards": {
+      "absolutes": [
+        { "title": "1er Lugar General", "amount": "$200" }
+      ],
+      "byCategory": []
+    },
+    "kit": {
+      "items": ["Camiseta oficial técnica", "Medalla conmemorativa", "Número con Chip RFID"],
+      "image": "/tenants/santarosa/assets/logos/corredor2.png"
+    }
+  },
+  "metadata": {
+    "keywords": ["Santa Rosa 10K", "Running Carúpano", "Carrera 2026 Venezuela", "Atletismo Sucre"],
+    "ogImage": "https://images.unsplash.com/photo-1547483125-9c7198a287ca?q=80&w=2070&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1532444458054-015fddf2b2cd?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2070&auto=format&fit=crop"
+    ]
+  }
+}

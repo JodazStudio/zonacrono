@@ -1,0 +1,60 @@
+{
+  "id": "bici-race",
+  "name": "Bici Race Carúpano",
+  "title": "BICI RACE 2026",
+  "year": "2026",
+  "subtitle": "Desafío de Ciclismo de Ruta",
+  "description": "El evento de ciclismo más importante del oriente venezolano. Pon a prueba tus piernas en un recorrido de 80 kilómetros por la costa del Caribe, con paisajes espectaculares y un nivel competitivo de primer orden.",
+  "heroImage": "https://images.unsplash.com/photo-1541625602330-2277a1cd1f59?q=80&w=2070&auto=format&fit=crop",
+  "logo": "",
+  "primaryColor": "#3b82f6",
+  "secondaryColor": "#1e40af",
+  "registrationLink": "/inscripcion",
+  "eventDate": "22 de junio de 2026",
+  "location": "Avenida Perimetral, Carúpano",
+  "infoCards": [
+    {
+      "title": "Gran Fondo 80K",
+      "description": "📅 22 de Junio de 2026\n\n📍 Salida: Faro de Carúpano\n\nRecorrido técnico con brisa marina constante que pondrá a prueba tu estrategia.",
+      "icon": "Trophy"
+    },
+    {
+      "title": "Seguridad Total",
+      "description": "Contaremos con escolta policial, ambulancias de soporte vital y 4 puntos de hidratación especializados.",
+      "icon": "ShieldCheck"
+    }
+  ],
+  "sponsors": [],
+  "organizers": [],
+  "eventDetails": {
+    "route": {
+      "title": "LA RUTA DEL SECTOR",
+      "description": "Saliendo del Faro de Carúpano hacia Playa Copey, retorno y subida al sector El Lirial.",
+      "image": ""
+    },
+    "categories": [
+      { "name": "Elite Masculino", "range": "18+" },
+      { "name": "Elite Femenino", "range": "18+" },
+      { "name": "Máster A", "range": "30-39" },
+      { "name": "Máster B", "range": "40+" }
+    ],
+    "awards": {
+      "absolutes": [
+        { "title": "Maillot Amarillo Ganador", "amount": "$350" }
+      ],
+      "byCategory": []
+    },
+    "kit": {
+      "items": ["Jersey oficial de carrera", "Anclaje de chip por ultrasonido", "Medalla Tallada"],
+      "image": ""
+    }
+  },
+  "metadata": {
+    "keywords": ["Ciclismo Carúpano", "Bici Race", "Carrera Bicicletas Venezuela", "Vuelta a Sucre"],
+    "ogImage": "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
+    "gallery": [
+       "https://images.unsplash.com/photo-1541625602330-2277a1cd1f59?q=80&w=2070&auto=format&fit=crop",
+       "https://images.unsplash.com/photo-1474506735269-112da78f9ed0?q=80&w=2070&auto=format&fit=crop"
+    ]
+  }
+}

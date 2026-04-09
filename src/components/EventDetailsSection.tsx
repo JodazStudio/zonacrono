@@ -57,25 +57,27 @@ export default function EventDetailsSection({ data }: EventDetailsSectionProps) 
                                           </p>
                                       </div>
                                   </div>
-                                  <div className="flex items-start gap-3">
-                                      <MapPin className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
-                                      <div className="text-left">
-                                          <p className="font-semibold mb-1">Mapa Interactivo</p>
-                                          <div className="flex flex-col gap-1 text-left">
-                                              {details.route.stravaLinks.map((link, i) => (
-                                                <a 
-                                                    key={i}
-                                                    href={link.url} 
-                                                    className="text-yellow-500 hover:text-yellow-400 underline font-permanent text-sm text-left"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    {link.label} →
-                                                </a>
-                                              ))}
-                                          </div>
-                                      </div>
-                                  </div>
+                                  {details.route.stravaLinks && details.route.stravaLinks.length > 0 && (
+                                    <div className="flex items-start gap-3">
+                                        <MapPin className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
+                                        <div className="text-left">
+                                            <p className="font-semibold mb-1">Mapa Interactivo</p>
+                                            <div className="flex flex-col gap-1 text-left">
+                                                {details.route.stravaLinks.map((link, i) => (
+                                                    <a 
+                                                        key={i}
+                                                        href={link.url} 
+                                                        className="text-yellow-500 hover:text-yellow-400 underline font-permanent text-sm text-left"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        {link.label} →
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                  )}
                               </div>
                               
                               <div className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg rounded-2xl p-4 w-full">

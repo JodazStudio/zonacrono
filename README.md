@@ -1,4 +1,4 @@
-# Events SaaS Platform
+# Zonacrono - Events SaaS Platform
 
 A high-performance, multitenant SaaS platform built with Next.js 15+ and Tailwind CSS 4+, designed for sports event organizers to quickly deploy branded landing pages.
 
@@ -27,7 +27,7 @@ The platform uses a **Subdomain-based Multitenancy** approach without a database
 ## 📁 Project Structure
 
 ```text
-events-saas/
+zonacrono/
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx            # Main SaaS Landing Page

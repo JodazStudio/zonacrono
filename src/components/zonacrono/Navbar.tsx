@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-2">
           <Timer className="h-6 w-6 text-primary" strokeWidth={2.5} />
           <span className="font-satoshi text-lg font-black uppercase tracking-tight text-foreground">
-            Apex<span className="text-primary">Live</span>
+            Zona<span className="text-primary">crono</span>
           </span>
         </Link>
 

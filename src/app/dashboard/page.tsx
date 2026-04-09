@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import Navbar from "@/components/apex/Navbar";
-import Footer from "@/components/apex/Footer";
-import RaceStats from "@/components/apex/dashboard/RaceStats";
-import LiveLeaderboard from "@/components/apex/dashboard/LiveLeaderboard";
-import FinishLineTicker from "@/components/apex/dashboard/FinishLineTicker";
-import CourseProgress from "@/components/apex/dashboard/CourseProgress";
-import AthleteModal from "@/components/apex/dashboard/AthleteModal";
+import Navbar from "@/components/zonacrono/Navbar";
+import Footer from "@/components/zonacrono/Footer";
+import RaceStats from "@/components/zonacrono/dashboard/RaceStats";
+import LiveLeaderboard from "@/components/zonacrono/dashboard/LiveLeaderboard";
+import FinishLineTicker from "@/components/zonacrono/dashboard/FinishLineTicker";
+import CourseProgress from "@/components/zonacrono/dashboard/CourseProgress";
+import AthleteModal from "@/components/zonacrono/dashboard/AthleteModal";
 import { Athlete, INITIAL_ATHLETES } from "@/lib/mock-race-data";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -154,7 +154,7 @@ export default function DashboardPage() {
              <span>Data Sync: 100%</span>
            </div>
            <div>
-             Apex Racing Live Engine v2.4.0-STABLE
+             Zonacrono Engine v2.4.0-STABLE
            </div>
         </div>
       </main>
