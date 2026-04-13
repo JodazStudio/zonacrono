@@ -348,7 +348,7 @@ export default function InscripcionPage() {
                         onSelect={(date) => handleChange("fechaNacimiento", date)}
                         disabled={(date) => date > new Date()}
                         initialFocus
-                        captionLayout="dropdown-buttons"
+                        captionLayout="dropdown"
                         fromYear={1920}
                         toYear={new Date().getFullYear()}
                       />

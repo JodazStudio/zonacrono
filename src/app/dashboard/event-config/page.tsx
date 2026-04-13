@@ -22,13 +22,12 @@ const eventSchema = z.object({
   name: z.string().min(3, 'El nombre debe tener al menos 3 caracteres'),
   slug: z.string()
     .min(3, 'El slug debe tener al menos 3 caracteres')
-    .regex(/^[a-z0-z0-9-]+$/, 'El slug solo puede contener minúsculas, números y guiones')
-    .transform(val => val.toLowerCase()),
+    .regex(/^[a-z0-z0-9-]+$/, 'El slug solo puede contener minúsculas, números y guiones'),
   description: z.string().optional(),
   event_date: z.string().min(1, 'La fecha del evento es requerida'),
   event_time: z.string().min(1, 'La hora del evento es requerida'),
   rules_text: z.string().optional(),
-  has_inventory: z.boolean().default(false),
+  has_inventory: z.boolean(),
   banner_url: z.string().url('URL inválida').or(z.literal('')).optional(),
   route_image_url: z.string().url('URL inválida').or(z.literal('')).optional(),
   strava_url: z.string().url('URL inválida').or(z.literal('')).optional(),

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { supabase } from '@/lib/supabase';
-import { User, Session } from '@supabase/supabase-js';
+import { User, Session, AuthChangeEvent } from '@supabase/supabase-js';
 
 export type Role = 'superadmin' | 'admin';
 
@@ -21,6 +21,7 @@ interface AuthState {
   initializeAuth: () => Promise<void>;
   login: (email: string, password: string) => Promise<{ error: string | null }>;
   logout: () => Promise<void>;
+  fetchUserProfile: (session: Session) => Promise<any>;
   
   // God Mode (Impersonation)
   startImpersonation: (adminId: string) => void;
@@ -31,7 +32,7 @@ interface AuthState {
  * Zustand store to manage platform authentication and roles.
  * Fetches the user profile via an internal API route for security.
  */
-export const useAuthStore = create<AuthState>((set, get) => ({
+export const useAuthStore = create<AuthState>()((set, get) => ({
   user: null,
   session: null,
   isLoading: true,
@@ -87,7 +88,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     }
 
     // 2. Listen for auth changes
-    supabase.auth.onAuthStateChange(async (_event, session) => {
+    supabase.auth.onAuthStateChange(async (_event: AuthChangeEvent, session: Session | null) => {
       if (session) {
         const profile = await get().fetchUserProfile(session);
         const role = profile?.role as Role || (session.user.app_metadata?.role as Role) || 'admin';
