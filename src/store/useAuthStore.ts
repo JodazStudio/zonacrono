@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { supabase } from '@/lib/supabase';
-import { User, Session } from '@supabase/supabase-js';
+import { User, Session, AuthChangeEvent } from '@supabase/supabase-js';
 
 export type Role = 'superadmin' | 'admin';
 
@@ -25,6 +25,7 @@ interface AuthState {
   // God Mode (Impersonation)
   startImpersonation: (adminId: string) => void;
   stopImpersonation: () => void;
+  fetchUserProfile: (session: Session) => Promise<{ role?: Role } | null>;
 }
 
 /**
@@ -87,7 +88,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     }
 
     // 2. Listen for auth changes
-    supabase.auth.onAuthStateChange(async (_event, session) => {
+    supabase.auth.onAuthStateChange(async (_event: AuthChangeEvent, session: Session | null) => {
       if (session) {
         const profile = await get().fetchUserProfile(session);
         const role = profile?.role as Role || (session.user.app_metadata?.role as Role) || 'admin';

@@ -28,7 +28,7 @@ const eventSchema = z.object({
   event_date: z.string().min(1, 'La fecha del evento es requerida'),
   event_time: z.string().min(1, 'La hora del evento es requerida'),
   rules_text: z.string().optional(),
-  has_inventory: z.boolean().default(false),
+  has_inventory: z.boolean(),
   banner_url: z.string().url('URL inválida').or(z.literal('')).optional(),
   route_image_url: z.string().url('URL inválida').or(z.literal('')).optional(),
   strava_url: z.string().url('URL inválida').or(z.literal('')).optional(),

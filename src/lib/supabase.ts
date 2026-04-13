@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -12,7 +12,7 @@ const isConfigured = supabaseUrl && supabaseUrl !== 'your-project-url.supabase.c
  */
 export const supabase = isConfigured 
   ? createClient(supabaseUrl, supabaseAnonKey)
-  : (null as any); // Fallback to null (cast to any for easier usage with optional chaining)
+  : (null as unknown as SupabaseClient); 
 
 /**
  * Admin client for use in API routes and server-side operations.

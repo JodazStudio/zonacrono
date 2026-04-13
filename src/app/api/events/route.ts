@@ -11,12 +11,15 @@ export async function GET(request: Request) {
     let query = supabase.from('events').select('*');
 
     if (slug) {
-      query = query.eq('id', slug).single();
+      // @ts-ignore
+      query = query.eq('slug', slug).single();
     } else {
       query = query.order('created_at', { ascending: true });
     }
 
     const { data, error } = await query;
+
+    console.log("data", data)
 
     if (error) {
       // If client is unconfigured or table missing, handle gracefully

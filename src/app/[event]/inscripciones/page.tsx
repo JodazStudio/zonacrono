@@ -90,6 +90,8 @@ export default function InscripcionPage() {
         // 1. Fetch Event and Stage
         const res = await fetch(`/api/events/${slug}`);
         const data = await res.json();
+
+        console.log(slug, data)
         
         if (data.error) {
           toast.error(data.error);
@@ -348,7 +350,7 @@ export default function InscripcionPage() {
                         onSelect={(date) => handleChange("fechaNacimiento", date)}
                         disabled={(date) => date > new Date()}
                         initialFocus
-                        captionLayout="dropdown-buttons"
+                        captionLayout="dropdown"
                         fromYear={1920}
                         toYear={new Date().getFullYear()}
                       />
