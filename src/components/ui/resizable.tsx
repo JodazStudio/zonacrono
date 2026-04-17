@@ -1,5 +1,4 @@
 import { GripVertical } from "lucide-react";
-// @ts-expect-error: react-resizable-panels types may not be fully compatible
 import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels";
 
 import { cn } from "@/lib/utils";
