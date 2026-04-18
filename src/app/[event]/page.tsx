@@ -22,14 +22,23 @@ export async function generateMetadata(props: { params: Promise<{ event: string 
   const data = getTenantData(params.event);
   if (!data) return { title: "Not Found" };
 
+  const ogTitle = data.metadata.ogTitle || data.title;
+  const ogDescription = data.metadata.ogDescription || data.description;
+  const twitterTitle = data.metadata.twitterTitle || ogTitle;
+  const twitterDescription = data.metadata.twitterDescription || ogDescription;
+
   return {
     title: data.title,
     description: data.description,
     keywords: data.metadata.keywords,
     openGraph: {
-      title: data.title,
-      description: data.description,
-      images: [data.metadata.ogImage],
+      title: ogTitle,
+      description: ogDescription,
+    },
+    twitter: {
+      card: data.metadata.twitterCard || "summary_large_image",
+      title: twitterTitle,
+      description: twitterDescription,
     },
   };
 }
@@ -61,6 +70,33 @@ export default async function EventPage(props: { params: Promise<{ event: string
     notFound();
   }
 
-  return <EventHubTemplate tenant={data} bcvRate={bcvRate} />;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: data.title,
+    description: data.description,
+    startDate: data.eventDate,
+    location: {
+      '@type': 'Place',
+      name: data.location,
+      address: data.location
+    },
+    image: data.metadata.ogImage,
+    organizer: {
+      '@type': 'Organization',
+      name: data.organizers?.[0]?.name || "Zonacrono",
+      url: "https://zonacrono.com"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <EventHubTemplate tenant={data} bcvRate={bcvRate} />
+    </>
+  );
 }
 

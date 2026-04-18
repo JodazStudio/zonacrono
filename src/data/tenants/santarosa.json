@@ -79,6 +79,11 @@
   "metadata": {
     "keywords": ["Carrera Santa Rosa", "Caminata Carúpano", "Santa Rosa 10K"],
     "ogImage": "/tenants/santarosa/og-image.jpg",
+    "ogTitle": "Santa Rosa de Lima 10K (2025) | Carrera y Caminata",
+    "ogDescription": "Participa en la Primera Edición de la Carrera y Caminata a Santa Rosa de Lima en Carúpano. 10K competitivos y 5K de caminata.",
+    "twitterTitle": "Santa Rosa de Lima 10K (2025)",
+    "twitterDescription": "Primera Edición de la Carrera y Caminata a Santa Rosa de Lima en Carúpano.",
+    "twitterCard": "summary_large_image",
     "gallery": [
       "/tenants/santarosa/assets/gallery/race-1.jpg",
       "/tenants/santarosa/assets/gallery/race-2.jpg",

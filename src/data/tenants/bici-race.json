@@ -122,6 +122,11 @@
   "metadata": {
     "keywords": ["Ciclismo", "Bici Race", "Solo Bici", "Campeare", "Rio Casanay", "Carúpano"],
     "ogImage": "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
+    "ogTitle": "Bici Race 2026 | Desafío de Ciclismo en Carúpano",
+    "ogDescription": "Únete al gran desafío de ciclismo con el recorrido Campeare - Rio Casanay. Cupos limitados. ¡Inscríbete ahora!",
+    "twitterTitle": "Bici Race 2026 | Desafío de Ciclismo",
+    "twitterDescription": "Únete al gran desafío de ciclismo con el recorrido Campeare - Rio Casanay. Cupos limitados.",
+    "twitterCard": "summary_large_image",
     "gallery": [
       "https://images.unsplash.com/photo-1532444458054-015fddf2b2cd?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2070&auto=format&fit=crop"

@@ -87,6 +87,11 @@ export interface TenantData {
   metadata: {
     keywords: string[];
     ogImage: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    twitterTitle?: string;
+    twitterDescription?: string;
+    twitterCard?: "summary" | "summary_large_image";
     gallery?: string[];
   };
 }
