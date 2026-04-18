@@ -1,12 +1,23 @@
+"use client";
+
 import { Handshake } from "lucide-react";
+
 import type { Sponsor } from "./types";
 import AnimatedContent from "../AnimatedContent";
+import LogoLoop from "../LogoLoop";
 
 interface SponsorsSectionProps {
   sponsors?: Sponsor[];
 }
 
 const SponsorsSection = ({ sponsors }: SponsorsSectionProps) => {
+  const logoItems = (sponsors || []).map((sponsor) => ({
+    src: sponsor.logoUrl || "",
+    alt: sponsor.name,
+    href: sponsor.url || "#",
+    title: sponsor.name,
+  }));
+
   return (
     <section id="sponsors" className="py-20 bg-card overflow-hidden">
       <div className="container mx-auto px-4">
@@ -17,27 +28,26 @@ const SponsorsSection = ({ sponsors }: SponsorsSectionProps) => {
         </AnimatedContent>
 
         {sponsors && sponsors.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto items-center">
-            {sponsors.map((sponsor, idx) => (
-              <AnimatedContent key={sponsor.id} delay={0.1 + idx * 0.05} distance={20} scale={0.9}>
-                <a
-                  href={sponsor.url || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-secondary/40 rounded-none p-6 flex items-center justify-center h-28 hover:bg-secondary/60 transition-colors border-2 border-border hover:border-ember/50 group cursor-pointer"
-                >
-                  {sponsor.logoUrl ? (
+          <div className="max-w-7xl mx-auto">
+            <LogoLoop
+              logos={logoItems}
+              logoHeight={96}
+              gap={64}
+              speed={80}
+              fadeOut={true}
+              pauseOnHover={true}
+              renderItem={(item) => (
+                <div className="group cursor-pointer px-4">
+                  {"src" in item && (
                     <img
-                      src={sponsor.logoUrl}
-                      alt={sponsor.name}
-                      className="max-h-16 max-w-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                      src={item.src}
+                      alt={item.alt}
+                      className="h-24 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                     />
-                  ) : (
-                    <span className="text-muted-foreground font-satoshi text-[10px] text-center font-bold uppercase tracking-widest">{sponsor.name}</span>
                   )}
-                </a>
-              </AnimatedContent>
-            ))}
+                </div>
+              )}
+            />
           </div>
         ) : (
           <div className="text-center py-12">
@@ -51,5 +61,6 @@ const SponsorsSection = ({ sponsors }: SponsorsSectionProps) => {
     </section>
   );
 };
+
 
 export default SponsorsSection;

@@ -33,6 +33,20 @@ export interface TenantAward {
   amount: string;
 }
 
+export interface TenantPricingStage {
+  id: string;
+  name: string;
+  priceUsd: number;
+  isActive: boolean;
+  spotsLeft?: number;
+}
+
+export interface TenantRule {
+  id: string;
+  title: string;
+  content: string;
+}
+
 export interface TenantData {
   id: string;
   name: string;
@@ -50,6 +64,14 @@ export interface TenantData {
   infoCards?: TenantInfoCard[];
   sponsors?: TenantSponsor[];
   organizers?: TenantOrganizer[];
+  pricingStages?: TenantPricingStage[];
+  rules?: TenantRule[];
+  contact?: {
+    whatsapp?: string;
+    email?: string;
+    phone?: string;
+    instagram?: string;
+  };
   eventDetails?: {
     route?: TenantRoute;
     categories?: TenantCategory[];
@@ -68,3 +90,4 @@ export interface TenantData {
     gallery?: string[];
   };
 }
+

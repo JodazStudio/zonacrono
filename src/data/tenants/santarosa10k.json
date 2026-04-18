@@ -29,8 +29,18 @@
       "icon": "Route"
     }
   ],
-  "sponsors": [],
-  "organizers": [],
+  "sponsors": [
+    { "name": "Alcaldia", "logo": "/tenants/santarosa/assets/logos/alcaldia2.png", "type": "institutional" },
+    { "name": "Santa Rosa", "logo": "/tenants/santarosa/assets/logos/santarosadelima.png", "type": "institutional" },
+    { "name": "Elite", "logo": "/tenants/santarosa/assets/logos/sponsors/elite.svg", "type": "official" },
+    { "name": "Bangood", "logo": "/tenants/santarosa/assets/logos/sponsors/bangood.png", "type": "official" },
+    { "name": "Vnet", "logo": "/tenants/santarosa/assets/logos/sponsors/vnet.png", "type": "official" }
+  ],
+  "organizers": [
+    { "name": "Titanes Runners", "logo": "/tenants/santarosa/assets/logos/TITANES23.png" },
+    { "name": "Running Centauros", "logo": "/tenants/santarosa/assets/logos/centauros.png" }
+  ],
+
   "eventDetails": {
     "route": {
       "title": "EL RECORRIDO",

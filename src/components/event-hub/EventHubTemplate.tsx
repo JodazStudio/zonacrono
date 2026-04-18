@@ -12,9 +12,11 @@ import type { EventData, Distance, Sponsor, GalleryImage, PricingStage, RuleSect
 
 interface EventHubTemplateProps {
   tenant: TenantData;
+  bcvRate?: number;
 }
 
-const EventHubTemplate = ({ tenant }: EventHubTemplateProps) => {
+const EventHubTemplate = ({ tenant, bcvRate }: EventHubTemplateProps) => {
+
   // Mapping TenantData to Hub components types
   const eventData: EventData = {
     name: tenant.title || tenant.name,
@@ -41,33 +43,39 @@ const EventHubTemplate = ({ tenant }: EventHubTemplateProps) => {
     alt: `${tenant.name} - Imagen ${idx + 1}`
   })) || [];
 
-  // Mock distances (In a real scenario, this would come from a data source)
-  const distances: Distance[] = [
-    { id: "10k", name: "10K", label: "Carrera Competitiva", description: "Circuito certificado de 10 kilómetros por la Av. Rómulo Gallegos." },
-    { id: "5k", name: "5K", label: "Caminata Recreativa", description: "Recorrido para toda la familia y caminantes recreativos." }
+  // Map distances from tenant data
+  const distances: Distance[] = tenant.eventDetails?.categories?.map((cat, idx) => ({
+    id: `cat-${idx}`,
+    name: cat.name,
+    label: cat.range,
+    description: `Categoría para participantes de ${cat.range}.`
+  })) || [
+    { id: "main", name: "Ruta Principal", label: tenant.location, description: tenant.description }
   ];
 
-  // Mock pricing stages (since TenantData doesn't have them yet)
-  const pricingStages: PricingStage[] = [
-    { id: "pre-sale", name: "Pre-venta", priceUsd: 15, isActive: true, spotsLeft: 45 },
-    { id: "regular", name: "Venta Regular", priceUsd: 20, isActive: false },
-    { id: "last-call", name: "Última Hora", priceUsd: 25, isActive: false }
+  // Map pricing stages from tenant data
+  const pricingStages: PricingStage[] = tenant.pricingStages || [
+    { id: "pre-sale", name: "Inscripción", priceUsd: 0, isActive: true }
   ];
 
-  // Map rules and policies
-  const rules: RuleSection[] = [
+  // Map rules and policies from tenant data
+  const rules: RuleSection[] = tenant.rules || [
     { id: "transfer", title: "Transferencia de Cupo", content: "Las inscripciones son personales e intransferibles bajo ninguna circunstancia." },
     { id: "refund", title: "Política de Reembolso", content: "No se realizarán reembolsos de dinero una vez procesado el pago de la inscripción." },
-    { id: "age", title: "Edad Mínima", content: "La edad mínima para participar en los 10K es de 16 años cumplidos al día del evento." },
-    { id: "medical", title: "Certificado Médico", content: "Todos los participantes declaran estar en óptimas condiciones físicas y de salud para completar la distancia seleccionada." }
+    { id: "age", title: "Edad Mínima", content: "La edad mínima para participar es de 18 años, o menores con autorización de representante." },
+    { id: "medical", title: "Salud", content: "Todos los participantes declaran estar en óptimas condiciones físicas y de salud para completar el evento." }
   ];
+
 
   return (
     <div className="min-h-screen bg-charcoal text-foreground selection:bg-ember selection:text-white">
       <StickyNav eventSlug={tenant.id} />
       
       <main>
-        <HeroSection event={eventData} countdownTarget={new Date("2025-08-30T07:00:00")} />
+        <HeroSection 
+          event={eventData} 
+          countdownTarget={tenant.eventDate ? new Date(tenant.eventDate) : new Date("2025-08-30T07:00:00")} 
+        />
         
         <DistancesSection 
           description={tenant.description}
@@ -76,7 +84,8 @@ const EventHubTemplate = ({ tenant }: EventHubTemplateProps) => {
           stravaUrl={tenant.eventDetails?.route?.stravaLinks?.[0]?.url}
         />
         
-        <PricingSection stages={pricingStages} bcvRate={54.20} />
+        <PricingSection stages={pricingStages} bcvRate={bcvRate} />
+
         
         <RulesSection rules={rules} />
         
@@ -90,8 +99,8 @@ const EventHubTemplate = ({ tenant }: EventHubTemplateProps) => {
 
       <EventFooter 
         contact={{ 
-          whatsapp: "584120000000", 
-          email: "info@zonacrono.com" 
+          whatsapp: tenant.contact?.whatsapp || "584120000000", 
+          email: tenant.contact?.email || "info@zonacrono.com" 
         }} 
         saasName="ZonaCrono"
         saasUrl="https://zonacrono.com"

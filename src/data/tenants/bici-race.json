@@ -4,53 +4,123 @@
   "title": "BICI RACE 2026",
   "year": "2026",
   "subtitle": "Desafío de Ciclismo de Ruta",
-  "description": "El evento de ciclismo más importante del oriente venezolano. Pon a prueba tus piernas en un recorrido de 40 kilómetros (20KM Uphill, 20KM Downhill) por la costa del Caribe, con paisajes espectaculares y un nivel competitivo de primer orden.",
+  "description": "Bici Race 2026: Gran desafío de ciclismo con el recorrido Campeare - Rio Casanay. Capacidad limitada de 50 a 150 participantes. Inscripciones por cupos, no por fecha. Organizado por Solo Bici.",
   "heroImage": "/tenants/bici-race/assets/hero.png",
   "logo": "",
   "primaryColor": "#3b82f6",
   "secondaryColor": "#1e40af",
   "registrationLink": "/bici-race/inscripciones",
-  "eventDate": "18 de octubre de 2026",
-  "location": "Avenida Perimetral, Carúpano",
+  "eventDate": "2026-10-18",
+  "location": "Avenida Perimetral, Carúpano (Ruta Campeare - Rio Casanay)",
   "infoCards": [
     {
-      "title": "Desafío 40K",
-      "description": "📅 18 de Octubre de 2026\n\n📍 Salida: Faro de Carúpano\n\nRecorrido técnico con 20KM Uphill y 20KM Downhill que pondrá a prueba tu resistencia.",
-      "icon": "Trophy"
+      "title": "Cupos Limitados",
+      "description": "Evento para un máximo de 50-150 personas. Las inscripciones se cierran al completar el cupo.",
+      "icon": "Users"
     },
     {
-      "title": "Seguridad Total",
-      "description": "Contaremos con escolta policial, ambulancias de soporte vital y 4 puntos de hidratación especializados.",
-      "icon": "ShieldCheck"
+      "title": "Recorrido",
+      "description": "Mismo recorrido de Campeare - Rio Casanay. Un desafío técnico e increíble.",
+      "icon": "Route"
+    },
+    {
+      "title": "Expo Evento",
+      "description": "Expo o congresillo con entrega de kits. Fecha por definir.",
+      "icon": "MapPin"
     }
   ],
-  "sponsors": [],
-  "organizers": [],
+  "sponsors": [
+    { "name": "Alcaldia", "logo": "/tenants/santarosa/assets/logos/alcaldia2.png", "type": "institutional" },
+    { "name": "Santa Rosa", "logo": "/tenants/santarosa/assets/logos/santarosadelima.png", "type": "institutional" },
+    { "name": "Elite", "logo": "/tenants/santarosa/assets/logos/sponsors/elite.svg", "type": "official" },
+    { "name": "Bangood", "logo": "/tenants/santarosa/assets/logos/sponsors/bangood.png", "type": "official" },
+    { "name": "Vnet", "logo": "/tenants/santarosa/assets/logos/sponsors/vnet.png", "type": "official" }
+  ],
+
+  "organizers": [
+    {
+      "name": "Solo Bici",
+      "logo": "",
+      "role": "Organizador Principal"
+    }
+  ],
+  "contact": {
+    "whatsapp": "Por definir",
+    "email": "Por definir"
+  },
+  "pricingStages": [
+    {
+      "id": "pre-sale",
+      "name": "Pre-Venta Especial",
+      "priceUsd": 35,
+      "isActive": true,
+      "spotsLeft": 30
+    },
+    {
+      "id": "regular-only",
+      "name": "Inscripción Sola",
+      "priceUsd": 35,
+      "isActive": false
+    },
+    {
+      "id": "with-jersey",
+      "name": "Con Franela/Jersey",
+      "priceUsd": 35,
+      "isActive": false
+    }
+  ],
+
+  "rules": [
+    {
+      "id": "quota",
+      "title": "Inscripción por Cupo",
+      "content": "Las inscripciones no se basan en fechas límite, sino en disponibilidad de cupos (50-150 personas)."
+    },
+    {
+      "id": "kit-options",
+      "title": "Opciones de Kit",
+      "content": "Puedes elegir inscripción sola o con franela (Jersey manga larga o Franela manga corta)."
+    },
+    {
+      "id": "payment",
+      "title": "Pago Móvil",
+      "content": "Los datos para el pago móvil y el contacto se proporcionarán al iniciar el proceso de inscripción."
+    },
+    {
+      "id": "awards-policy",
+      "title": "Premiación",
+      "content": "La premiación para todas las categorías está por definir."
+    }
+  ],
   "eventDetails": {
     "route": {
-      "title": "LA RUTA DEL SECTOR",
-      "description": "Saliendo del Faro de Carúpano hacia Playa Copey, retorno y subida al sector El Lirial.",
-      "image": ""
+      "title": "Campeare - Rio Casanay",
+      "description": "Mismo recorrido de Campeare - Rio Casanay.",
+      "image": "/tenants/bici-race/assets/route-map.png",
+
+      "stravaLinks": [
+        { "label": "Recorrido en Strava", "url": "https://www.strava.com/activities/17821377180" }
+      ]
     },
     "categories": [
-      { "name": "Elite Masculino", "range": "18+" },
-      { "name": "Elite Femenino", "range": "18+" },
-      { "name": "Máster A", "range": "30-39" },
-      { "name": "Máster B", "range": "40+" }
+      { "name": "Élite Masculino/Femenino", "range": "Hasta 39 años" },
+      { "name": "Master", "range": "+40 años" }
     ],
     "awards": {
-      "absolutes": [
-        { "title": "Maillot Amarillo Ganador", "amount": "$350" }
-      ],
+      "absolutes": [],
       "byCategory": []
     },
     "kit": {
-      "items": ["Jersey oficial de carrera", "Anclaje de chip por ultrasonido", "Medalla Tallada"],
+      "items": [
+        "Jersey oficial (Opcional: Manga Larga o Manga Corta)",
+        "Medalla finisher",
+        "Número de corredor"
+      ],
       "image": ""
     }
   },
   "metadata": {
-    "keywords": ["Ciclismo Carúpano", "Bici Race", "Carrera Bicicletas Venezuela", "Vuelta a Sucre"],
+    "keywords": ["Ciclismo", "Bici Race", "Solo Bici", "Campeare", "Rio Casanay", "Carúpano"],
     "ogImage": "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
     "gallery": [
       "https://images.unsplash.com/photo-1532444458054-015fddf2b2cd?q=80&w=2070&auto=format&fit=crop",
@@ -58,3 +128,5 @@
     ]
   }
 }
+
+

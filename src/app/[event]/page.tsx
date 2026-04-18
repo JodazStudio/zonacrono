@@ -34,13 +34,33 @@ export async function generateMetadata(props: { params: Promise<{ event: string 
   };
 }
 
+async function getExchangeRate() {
+  try {
+    const res = await fetch("https://api.akomo.xyz/api/exchange-rates", { 
+      next: { revalidate: 3600 } // Cache for 1 hour
+    });
+    const data = await res.json();
+    const rate = data.rates.find((r: any) => r.label === "USD");
+    if (rate) {
+      return parseFloat(rate.value.replace(",", "."));
+    }
+  } catch (error) {
+    console.error("Error fetching exchange rate:", error);
+  }
+  return 54.20; // Default fallback
+}
+
 export default async function EventPage(props: { params: Promise<{ event: string }> }) {
   const params = await props.params;
-  const data = getTenantData(params.event);
+  const [data, bcvRate] = await Promise.all([
+    getTenantData(params.event),
+    getExchangeRate()
+  ]);
 
   if (!data) {
     notFound();
   }
 
-  return <EventHubTemplate tenant={data} />;
+  return <EventHubTemplate tenant={data} bcvRate={bcvRate} />;
 }
+
