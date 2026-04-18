@@ -56,10 +56,10 @@
       ]
     },
     "categories": [
-      { "name": "Juvenil", "range": "16-19" },
-      { "name": "Libre", "range": "20-29" },
-      { "name": "Submáster", "range": "30-39" },
-      { "name": "Máster A", "range": "40-49" }
+      { "name": "Juvenil", "range": "16-19", "description": "Masculino / Femenino" },
+      { "name": "Libre", "range": "20-29", "description": "Masculino / Femenino" },
+      { "name": "Submáster", "range": "30-39", "description": "Masculino / Femenino" },
+      { "name": "Máster A", "range": "40-49", "description": "Masculino / Femenino" }
     ],
     "awards": {
       "absolutes": [

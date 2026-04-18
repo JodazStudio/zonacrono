@@ -26,6 +26,7 @@ export interface TenantRoute {
 export interface TenantCategory {
   name: string;
   range: string;
+  description?: string;
 }
 
 export interface TenantAward {

@@ -48,10 +48,10 @@
       "image": "/tenants/santarosa/assets/images/ruta.png"
     },
     "categories": [
-      { "name": "Juvenil", "range": "15-17" },
-      { "name": "Libre", "range": "18-35" },
-      { "name": "Submáster", "range": "36-45" },
-      { "name": "Máster", "range": "46+" }
+      { "name": "Juvenil", "range": "15-17", "description": "Masculino / Femenino" },
+      { "name": "Libre", "range": "18-35", "description": "Masculino / Femenino" },
+      { "name": "Submáster", "range": "36-45", "description": "Masculino / Femenino" },
+      { "name": "Máster", "range": "46+", "description": "Masculino / Femenino" }
     ],
     "awards": {
       "absolutes": [

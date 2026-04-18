@@ -103,8 +103,8 @@
       ]
     },
     "categories": [
-      { "name": "Élite Masculino/Femenino", "range": "Hasta 39 años" },
-      { "name": "Master", "range": "+40 años" }
+      { "name": "Élite", "range": "Hasta 39 años", "description": "Masculino / Femenino" },
+      { "name": "Master", "range": "+40 años", "description": "Masculino / Femenino" }
     ],
     "awards": {
       "absolutes": [],

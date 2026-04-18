@@ -44,12 +44,15 @@ const EventHubTemplate = ({ tenant, bcvRate }: EventHubTemplateProps) => {
   })) || [];
 
   // Map distances from tenant data
-  const distances: Distance[] = tenant.eventDetails?.categories?.map((cat, idx) => ({
-    id: `cat-${idx}`,
-    name: cat.name,
-    label: cat.range,
-    description: `Categoría para participantes de ${cat.range}.`
-  })) || [
+  const distances: Distance[] = tenant.eventDetails?.categories?.map((cat, idx) => {
+    const hasGenderInfo = /masculino\/femenino/i.test(cat.name);
+    return {
+      id: `cat-${idx}`,
+      name: cat.name.replace(/\s+masculino\/femenino/i, '').trim(),
+      label: cat.range,
+      description: cat.description || (hasGenderInfo ? "Masculino / Femenino" : `Categoría para participantes de ${cat.range}.`)
+    };
+  }) || [
     { id: "main", name: "Ruta Principal", label: tenant.location, description: tenant.description }
   ];
 
